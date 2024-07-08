@@ -1,0 +1,67 @@
+:host {
+  display: block;
+}
+
+.root {
+  @apply grid p-2.5 bg-grid rounded-xl;
+}
+
+.tile {
+  @apply absolute left-0 w-cell-size h-cell-size;
+  @apply h-cell-size w-cell-size grid place-items-center;
+  @apply rounded-md bg-cell;
+  @apply text-dark-content;
+}
+
+.tile-inner {
+  @apply text-2xl font-bold;
+}
+
+.tile[data-value="2"] {
+  @apply bg-value-2 text-light-content;
+}
+.tile[data-value="4"] {
+  @apply bg-value-4 text-light-content;
+}
+.tile[data-value="8"] {
+  @apply bg-value-8;
+}
+.tile[data-value="16"] {
+  @apply bg-value-16;
+}
+.tile[data-value="32"] {
+  @apply bg-value-32;
+}
+.tile[data-value="64"] {
+  @apply bg-value-64;
+}
+.tile[data-value="128"] {
+  @apply bg-value-128;
+}
+.tile[data-value="256"] {
+  @apply bg-value-256;
+}
+.tile[data-value="512"] {
+  @apply bg-value-512;
+}
+.tile[data-value="1024"] {
+  @apply bg-value-1024;
+}
+.tile[data-value="2048"] {
+  @apply bg-value-2048;
+}
+.tile[data-value="4096"] {
+  @apply bg-value-4096;
+}
+.tile[data-value="8192"] {
+  @apply bg-value-8192;
+}
+.tile[data-value="16384"] {
+  @apply bg-value-16384;
+}
+.tile[data-value="32768"] {
+  @apply bg-value-32768;
+}
+.tile[data-value="65536"] {
+  @apply bg-value-65536;
+}

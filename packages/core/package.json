@@ -1,0 +1,26 @@
+{
+  "name": "@omni2048/core",
+  "version": "0.1.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "module": "./dist/index.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./utils": "./dist/lib/utils.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* hides all undefined elements */
+:not(:defined) {
+  display: none;
+}

@@ -1,0 +1,44 @@
+{
+  "name": "omni2048",
+  "module": "index.ts",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alanrsoares/omni2048.git"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "build:packages": "turbo run build --filter=\"./packages/*\"",
+    "changeset": "changeset",
+    "changeset:release": "bun build:packages && changeset publish",
+    "changeset:release-snap": "bun build:packages && changeset publish --snapshot",
+    "changeset:version": "changeset version",
+    "changeset:publish": "changeset publish",
+    "changeset:snap": "changeset version --snapshot snap",
+    "cs": "changeset",
+    "cs:release": "bun changeset:release",
+    "cs:release-snap": "bun changeset:release-snap",
+    "cs:version": "bun changeset:version",
+    "cs:snap": "bun changeset:snap",
+    "cs:publish": "bun changeset:publish"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.5",
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/bun": "latest",
+    "changeset": "^0.2.6",
+    "husky": "^9.0.11",
+    "turbo": "^1.13.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
